@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  {% include head-seo.html %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">ERP Linker <strong>OdooSync</strong></span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#overview">Overview</a>
+        <a href="#editions">Editions</a>
+        <a href="#compare">Compare</a>
+        <a href="#requirements">Requirements</a>
+        <a href="#faq">FAQ</a>
+        <a href="#support">Support</a>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn-ghost" href="{{ site.lite_repo }}">Get Lite</a>
+        <a class="btn btn-primary" href="{{ site.pro_url }}">Get Pro</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    {% include footer-sponsor.html %}
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-brand">ERP Linker OdooSync</p>
+        <p class="footer-tagline">WooCommerce ↔ Odoo integration for WordPress stores.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Lite</p>
+        <ul>
+          <li><a href="{{ site.lite_repo }}">GitHub repository</a></li>
+          <li><a href="{{ site.docs_lite }}">Installation</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Pro</p>
+        <ul>
+          <li><a href="{{ site.pro_url }}">Get Pro</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Support</p>
+        <ul>
+          <li><a href="#support">Sponsor &amp; Pro evaluation</a></li>
+          <li><a href="{{ site.funding.github_sponsors }}" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a></li>
+          <li><a href="{{ site.funding.buymeacoffee }}" target="_blank" rel="noopener noreferrer">Buy Me a Coffee</a></li>
+          <li><a href="{{ site.funding.kofi }}" target="_blank" rel="noopener noreferrer">Ko-fi</a></li>
+          <li><a href="{{ site.funding.paypal }}" target="_blank" rel="noopener noreferrer">PayPal</a></li>
+          <li><a href="{{ site.lite_issues }}">Report an issue</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Legal</p>
+        <ul>
+          <li>GPL v2 or later (Lite)</li>
+          <li>Odoo 18 &amp; 19 supported</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>
+        Made with 💛 by <strong>Ajay</strong> ·
+        <a href="{{ site.funding.buymeacoffee }}" target="_blank" rel="noopener noreferrer">☕ Coffee</a> ·
+        <a href="{{ site.funding.github_sponsors }}" target="_blank" rel="noopener noreferrer">❤️ Sponsor</a> ·
+        <a href="{{ site.funding.kofi }}" target="_blank" rel="noopener noreferrer">Ko-fi</a> ·
+        <a href="{{ site.funding.paypal }}" target="_blank" rel="noopener noreferrer">PayPal</a>
+      </p>
+      <p>&copy; {{ 'now' | date: '%Y' }} ERP Linker. Not affiliated with WooCommerce or Odoo S.A.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+title: ERP Linker OdooSync
+title_separator: "|"
+description: Sync WooCommerce with Odoo 18/19 — products, orders, customers, and stock. Free OdooSync Lite WordPress plugin or Pro with real-time webhooks, HPOS, and GDPR support.
+url: "https://ackm04.github.io"
+baseurl: "/erplinker-odoosync-website"
+lang: en
+
+logo: /assets/img/logo-mark.svg
+image: /assets/img/og-image.png
+
+# Author meta is output in _includes/head-seo.html (jekyll-seo-tag mis-parses twitter handles from author.name).
+
+social:
+  name: ERP Linker OdooSync
+  links:
+    - https://github.com/ackm04/erplinker-odoosync-lite
+    - https://erplinker.com/downloads/woocommerce-odoo-integration-odoosync/
+
+keywords:
+  - woocommerce odoo sync
+  - wordpress odoo integration
+  - odoo woocommerce plugin
+  - odoo 18 woocommerce
+  - odoo 19 woocommerce
+  - woocommerce erp sync
+  - odoo product sync
+  - odoo order sync
+  - woocommerce stock sync
+  - hpos odoo integration
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .github
+
+lite_repo: "https://github.com/ackm04/erplinker-odoosync-lite"
+lite_issues: "https://github.com/ackm04/erplinker-odoosync-lite/issues"
+docs_lite: "https://github.com/ackm04/erplinker-odoosync-lite#installation"
+pro_url: "https://erplinker.com/downloads/woocommerce-odoo-integration-odoosync/"
+github_profile: "https://github.com/ackm04"
+support_email: "ackm04@gmail.com"
+sponsor_pro_min_usd: 19
+sponsor_pro_hours: 24
+funding:
+  buymeacoffee: "https://www.buymeacoffee.com/ackm04"
+  github_sponsors: "https://github.com/sponsors/ackm04"
+  kofi: "https://ko-fi.com/ackm04"
+  paypal: "https://paypal.me/officialajayindia"

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ackm04.github.io/erplinker-odoosync-website/sitemap.xml

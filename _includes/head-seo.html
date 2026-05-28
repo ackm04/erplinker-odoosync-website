@@ -1,0 +1,164 @@
+<meta name="keywords" content="{{ page.keywords | default: site.keywords | join: ', ' }}">
+<meta name="author" content="ERP Linker">
+<meta name="theme-color" content="#0f766e">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
+<link rel="icon" href="{{ '/assets/img/logo-mark.svg' | relative_url }}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ '/assets/img/og-image.png' | relative_url }}">
+<link rel="alternate" hreflang="en" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ '/' | absolute_url }}#organization",
+      "name": "ERP Linker",
+      "url": "https://erplinker.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ '/assets/img/logo-mark.svg' | absolute_url }}"
+      },
+      "sameAs": [
+        "{{ site.lite_repo }}",
+        "{{ site.pro_url }}"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ '/' | absolute_url }}#website",
+      "url": "{{ '/' | absolute_url }}",
+      "name": "{{ site.title | escape }}",
+      "description": "{{ site.description | escape }}",
+      "publisher": {
+        "@id": "{{ '/' | absolute_url }}#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}#webpage",
+      "url": "{{ page.url | absolute_url }}",
+      "name": "{{ page.title | default: site.title | escape }}",
+      "description": "{{ page.description | default: site.description | escape }}",
+      "isPartOf": {
+        "@id": "{{ '/' | absolute_url }}#website"
+      },
+      "about": {
+        "@id": "{{ '/' | absolute_url }}#software-lite"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "{{ '/' | absolute_url }}#software-lite",
+      "name": "ERP Linker OdooSync Lite",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "WooCommerce Odoo integration",
+      "operatingSystem": "WordPress",
+      "softwareVersion": "3.2.0",
+      "description": "Free WordPress plugin to sync WooCommerce products, customers, orders, and stock with Odoo 18/19.",
+      "url": "{{ site.lite_repo }}",
+      "downloadUrl": "{{ site.lite_repo }}",
+      "featureList": "Product sync, customer sync, order sync, stock sync, WP-Cron scheduling, HPOS compatibility, GDPR privacy tools, encrypted credentials",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "publisher": {
+        "@id": "{{ '/' | absolute_url }}#organization"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "{{ '/' | absolute_url }}#software-pro",
+      "name": "ERP Linker OdooSync Pro",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "WooCommerce Odoo integration",
+      "operatingSystem": "WordPress",
+      "softwareVersion": "3.2.0",
+      "description": "Commercial WooCommerce Odoo sync plugin with real-time webhooks, field mapping, analytics, refunds, multi-warehouse, and integrations.",
+      "url": "{{ site.pro_url }}",
+      "downloadUrl": "{{ site.pro_url }}",
+      "featureList": "Real-time bidirectional sync, webhooks, field mapping, batch processing, analytics dashboard, refunds, tax sync, shipping carriers, multi-warehouse, MRP, WP-CLI, GraphQL",
+      "offers": {
+        "@type": "Offer",
+        "url": "{{ site.pro_url }}",
+        "availability": "https://schema.org/InStock"
+      },
+      "isRelatedTo": {
+        "@id": "{{ '/' | absolute_url }}#software-lite"
+      },
+      "publisher": {
+        "@id": "{{ '/' | absolute_url }}#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "{{ page.url | absolute_url }}#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can OdooSync Lite and Pro run together?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. They share core class names. Lite detects Pro and stays inactive so you can safely remove Lite after upgrading."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Odoo versions are supported by OdooSync?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Odoo 18 and Odoo 19, both Community and Enterprise editions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is WooCommerce HPOS supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Both OdooSync Lite and Pro declare HPOS compatibility and use WooCommerce CRUD APIs for order data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are Odoo credentials stored in OdooSync?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Credentials are encrypted at rest. Pro adds PBKDF2 key derivation with per-credential salts and independent security auditing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I download OdooSync Pro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OdooSync Pro is available from ERP Linker. OdooSync Lite remains free and open source on GitHub."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does OdooSync require a custom Odoo module?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. OdooSync uses Odoo's standard XML-RPC API. No custom Odoo module or server-side changes are required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can sponsors try OdooSync Pro before buying?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Sponsor $19 USD or more via GitHub Sponsors, Buy Me a Coffee, Ko-fi, or PayPal, then email ackm04@gmail.com with your payment reference and GitHub username. You receive a 24-hour OdooSync Pro evaluation license after verification."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>

@@ -1,0 +1,255 @@
+---
+layout: default
+title: WooCommerce Odoo Sync Plugin for WordPress
+description: Sync WooCommerce with Odoo 18/19 — products, orders, customers, and stock. Free OdooSync Lite plugin or Pro with real-time webhooks, HPOS, GDPR, and multi-warehouse support.
+image: /assets/img/og-image.png
+keywords:
+  - woocommerce odoo sync plugin
+  - wordpress odoo integration
+  - odoo 18 woocommerce connector
+  - odoo 19 woocommerce sync
+---
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">WordPress · WooCommerce · Odoo 18/19</p>
+      <h1>WooCommerce Odoo sync for WordPress — <em>finally in sync.</em></h1>
+      <p class="lead">
+        OdooSync is a WooCommerce Odoo integration plugin that bridges your store and ERP
+        without custom server modules. Sync products, customers, orders, and stock with
+        Odoo 18 or Odoo 19 — on a schedule with Lite, or in real time with Pro.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="{{ site.lite_repo }}">Download Lite — Free</a>
+        <a class="btn btn-secondary btn-lg" href="{{ site.pro_url }}">Explore Pro</a>
+      </div>
+      <ul class="hero-trust">
+        <li>HPOS compatible</li>
+        <li>GDPR ready</li>
+        <li>Encrypted credentials</li>
+        <li>No Odoo module required</li>
+      </ul>
+    </div>
+    <div class="hero-panel" aria-hidden="true">
+      <div class="flow-card">
+        <div class="flow-node flow-wc">WooCommerce</div>
+        <div class="flow-lines">
+          <span class="flow-arrow bidirectional"></span>
+        </div>
+        <div class="flow-node flow-odoo">Odoo ERP</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><strong>Products</strong><span>Catalog sync</span></div>
+        <div class="stat"><strong>Orders</strong><span>Sales pipeline</span></div>
+        <div class="stat"><strong>Stock</strong><span>Inventory levels</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted" id="overview">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Who it's for</p>
+      <h2>Built for WooCommerce stores using Odoo ERP</h2>
+      <p class="section-lead">
+        Whether you run a single WooCommerce shop backed by Odoo inventory or manage
+        a growing catalog across channels, OdooSync gives you a reliable WordPress-native
+        integration path — not a fragile custom script.
+      </p>
+    </div>
+    <div class="persona-grid">
+      <article class="persona-card">
+        <h3>Store owners</h3>
+        <p>Stop copying orders and stock levels by hand. Lite gets essential sync running in minutes from your WordPress admin.</p>
+      </article>
+      <article class="persona-card">
+        <h3>Operations teams</h3>
+        <p>Pro adds batch jobs, health scoring, conflict resolution, and email digests so you can trust sync at scale.</p>
+      </article>
+      <article class="persona-card">
+        <h3>Developers &amp; agencies</h3>
+        <p>WP-CLI, GraphQL, webhooks, and field mapping in Pro fit DevOps workflows and client deployments.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="editions">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Two editions</p>
+      <h2>OdooSync Lite and Pro — choose your WooCommerce Odoo connector</h2>
+    </div>
+    <div class="edition-grid">
+      <article class="edition-card edition-lite">
+        <div class="edition-badge">Free · Open source</div>
+        <h3>OdooSync Lite</h3>
+        <p class="edition-tagline">Essential sync for small businesses and first integrations.</p>
+        <p class="edition-version">Current release: <strong>v3.2.0</strong></p>
+        <ul class="feature-list">
+          <li>Product sync (Odoo ↔ WooCommerce)</li>
+          <li>Customer sync (WooCommerce → Odoo)</li>
+          <li>Order sync (WooCommerce → Odoo)</li>
+          <li>Stock sync (Odoo → WooCommerce)</li>
+          <li>Scheduled sync via WP-Cron</li>
+          <li>Simple admin dashboard</li>
+          <li>HPOS &amp; GDPR support</li>
+          <li>Encrypted credential storage</li>
+        </ul>
+        <div class="edition-actions">
+          <a class="btn btn-primary" href="{{ site.lite_repo }}">View on GitHub</a>
+          <a class="btn btn-ghost" href="{{ site.docs_lite }}">Install guide</a>
+        </div>
+      </article>
+
+      <article class="edition-card edition-pro">
+        <div class="edition-badge edition-badge-pro">Commercial · Full platform</div>
+        <h3>OdooSync Pro</h3>
+        <p class="edition-tagline">Enterprise-grade automation, observability, and integrations.</p>
+        <p class="edition-version">Current release: <strong>v3.2.0</strong></p>
+        <ul class="feature-list">
+          <li>Everything in Lite, plus:</li>
+          <li>Real-time bidirectional sync &amp; webhooks</li>
+          <li>Advanced field mapping (15+ transforms)</li>
+          <li>Batch processing &amp; sync preview</li>
+          <li>Analytics, health scoring &amp; email digests</li>
+          <li>Refunds, taxes, carriers &amp; payment mapping</li>
+          <li>Product bundles / BOM &amp; multi-warehouse</li>
+          <li>MRP, B2B, purchase sync &amp; lot tracking</li>
+          <li>9+ integrations (Stripe, ShipStation, …)</li>
+          <li>WP-CLI, GraphQL &amp; priority support</li>
+        </ul>
+        <div class="edition-actions">
+          <a class="btn btn-primary" href="{{ site.pro_url }}">Get Pro</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted" id="compare">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Compare</p>
+      <h2>OdooSync Lite vs Pro feature comparison</h2>
+    </div>
+    <div class="table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">Lite</th>
+            <th scope="col">Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Product, customer, order &amp; stock sync</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Scheduled sync (WP-Cron)</td><td>✓</td><td>✓</td></tr>
+          <tr><td>HPOS &amp; GDPR compliance</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Real-time webhooks</td><td>—</td><td>✓</td></tr>
+          <tr><td>Field mapping &amp; conflict resolution</td><td>—</td><td>✓</td></tr>
+          <tr><td>Batch processing &amp; sync preview</td><td>—</td><td>✓</td></tr>
+          <tr><td>Analytics &amp; health dashboard</td><td>—</td><td>✓</td></tr>
+          <tr><td>Refunds, taxes &amp; shipping carriers</td><td>—</td><td>✓</td></tr>
+          <tr><td>Multi-warehouse &amp; MRP</td><td>—</td><td>✓</td></tr>
+          <tr><td>Third-party integrations</td><td>—</td><td>9+</td></tr>
+          <tr><td>WP-CLI &amp; GraphQL API</td><td>—</td><td>✓</td></tr>
+          <tr><td>License</td><td>GPL v2+</td><td>Commercial</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="requirements">
+  <div class="wrap req-grid">
+    <div>
+      <p class="eyebrow">Requirements</p>
+      <h2>OdooSync system requirements</h2>
+      <ul class="req-list">
+        <li><strong>WordPress</strong> 5.8 or newer</li>
+        <li><strong>WooCommerce</strong> 6.0 or newer</li>
+        <li><strong>PHP</strong> 8.0 or newer</li>
+        <li><strong>Odoo</strong> 18 or 19 (Community or Enterprise)</li>
+        <li><strong>Odoo XML-RPC</strong> enabled on your instance</li>
+      </ul>
+      <p class="note">No custom Odoo module is required — OdooSync uses Odoo's standard XML-RPC API.</p>
+    </div>
+    <div class="install-card">
+      <h3>Quick start with Lite</h3>
+      <ol>
+        <li>Clone or download from GitHub</li>
+        <li>Upload to <code>wp-content/plugins/</code></li>
+        <li>Activate in WordPress</li>
+        <li>Open <strong>OdooSync Lite → Settings</strong></li>
+        <li>Enter Odoo URL, database, and credentials</li>
+        <li>Test connection, enable sync, save</li>
+      </ol>
+      <a class="btn btn-primary" href="{{ site.lite_repo }}">Open Lite repository</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted" id="faq">
+  <div class="wrap faq-wrap">
+    <div class="section-head">
+      <p class="eyebrow">FAQ</p>
+      <h2>WooCommerce Odoo sync FAQ</h2>
+    </div>
+    <details class="faq-item">
+      <summary>Can Lite and Pro run together?</summary>
+      <p>No. They share core class names. Lite detects Pro and stays inactive so you can safely remove Lite after upgrading.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Which Odoo versions are supported?</summary>
+      <p>Odoo 18 and Odoo 19, both Community and Enterprise editions.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Is WooCommerce HPOS supported?</summary>
+      <p>Yes. Both editions declare HPOS compatibility and use WooCommerce CRUD APIs for order data.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How are credentials stored?</summary>
+      <p>Credentials are encrypted at rest. Pro adds PBKDF2 key derivation with per-credential salts and independent security auditing.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Where do I get Pro?</summary>
+      <p>Pro is available from <a href="{{ site.pro_url }}">ERP Linker</a>. Lite remains free and open source on GitHub.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Does OdooSync require a custom Odoo module?</summary>
+      <p>No. OdooSync uses Odoo's standard XML-RPC API. No custom Odoo module or server-side changes are required.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can sponsors try OdooSync Pro before buying?</summary>
+      <p>
+        Yes. Sponsor <strong>${{ site.sponsor_pro_min_usd }} USD or more</strong> via
+        <a href="{{ site.funding.github_sponsors }}">GitHub Sponsors</a>,
+        <a href="{{ site.funding.buymeacoffee }}">Buy Me a Coffee</a>,
+        <a href="{{ site.funding.kofi }}">Ko-fi</a>, or
+        <a href="{{ site.funding.paypal }}">PayPal</a>, then email
+        <a href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>
+        with your payment reference and GitHub username. You'll receive a
+        <strong>{{ site.sponsor_pro_hours }}-hour Pro evaluation license</strong> after verification.
+        See the <a href="#support">Support</a> section for full steps.
+      </p>
+    </details>
+  </div>
+</section>
+
+{% include sponsor-section.html %}
+
+<section class="section cta-band">
+  <div class="wrap cta-inner">
+    <div>
+      <h2>Connect WooCommerce and Odoo today</h2>
+      <p>Install Lite today from GitHub, or get Pro for advanced sync and integrations.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-primary btn-lg" href="{{ site.lite_repo }}">Get Lite free</a>
+      <a class="btn btn-secondary btn-lg" href="{{ site.pro_url }}">Get Pro</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$ROOT"
+
+setup_brew_ruby() {
+  for prefix in /opt/homebrew/opt/ruby@3.3 /usr/local/opt/ruby@3.3 /opt/homebrew/opt/ruby /usr/local/opt/ruby; do
+    if [[ -x "${prefix}/bin/ruby" ]]; then
+      export PATH="${prefix}/bin:${PATH}"
+      local gem_bin
+      gem_bin="$(ruby -e 'v=RUBY_VERSION[/^\d+\.\d+/]; print "/opt/homebrew/lib/ruby/gems/#{v}/bin"' 2>/dev/null || true)"
+      if [[ -d "$gem_bin" ]]; then
+        export PATH="${gem_bin}:${PATH}"
+      fi
+      return 0
+    fi
+  done
+  return 1
+}
+
+setup_brew_ruby || true
+
+RUBY_VERSION="$(ruby -e 'print RUBY_VERSION')"
+MAJOR="$(echo "$RUBY_VERSION" | cut -d. -f1)"
+
+if [[ "$MAJOR" -lt 3 ]]; then
+  echo "Ruby 3.0+ is required (found ${RUBY_VERSION})." >&2
+  echo "Install with: brew install ruby@3.3" >&2
+  echo "Then run: bin/serve" >&2
+  exit 1
+fi
+
+gem install bundler --no-document >/dev/null 2>&1 || true
+bundle check >/dev/null 2>&1 || bundle install
+exec bundle exec jekyll serve --livereload "$@"
